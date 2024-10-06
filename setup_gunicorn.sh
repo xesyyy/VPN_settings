@@ -9,7 +9,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/root/app
-ExecStart=/usr/local/bin/gunicorn --workers 3 --bind unix:/tmp/gunicorn.sock -m 007 app:app
+ExecStart=/usr/local/bin/gunicorn --workers 3 --bind unix:/tmp/gunicorn.sock -m 007 server:app
 
 [Install]
 WantedBy=multi-user.target
